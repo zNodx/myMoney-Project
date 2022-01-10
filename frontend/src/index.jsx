@@ -1,5 +1,15 @@
-import React from "react";
-import  App from "/home/mateus/Desktop/myMoney/frontend/src/main/App.jsx"
-import ReactDOM  from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { applyMiddleware,createStore} from 'redux'
+import promise from 'redux-promise'
 
-ReactDOM.render(<App />,document.getElementById('App'))
+import reducers from './main/reducers'
+import Routes from './main/routes'
+
+const store = applyMiddleware(promise)(createStore)(reducers)
+ReactDOM.render(
+    <Provider store={store}>
+        <Routes />
+    </Provider>
+, document.getElementById('app'))

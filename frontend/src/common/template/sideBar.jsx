@@ -1,10 +1,10 @@
-import Menu from "./menu";
-import React from "react";
+import React from 'react'
+import Menu from './menu'
 
-export default props =>(
-    <aside className="main-sidebar">
-        <section className="sidebar">
-            <Menu/>
+export default props => (
+    <aside className='main-sidebar'>
+        <section className='sidebar'>
+            <Menu />
         </section>
     </aside>
 )
